@@ -17,7 +17,7 @@ const StyledNavLink = styled(NavLink)`
   &:link,
   &:visited {
     display: flex;
-    align-<links: center;
+    align-items: center;
     gap: 1.2rem;
 
     color: var(--color-grey-600);

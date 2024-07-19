@@ -10,3 +10,14 @@
 009 Setting Up Pages and Routes
 010 Building the App Layout
 011 Building the Sidebar and Main Navigation
+==============================================
+26 - Supabase Crash Course Building a Back-End!
+001 Section Overview
+002 What is Supabase
+003 Creating a New Database
+004 Modeling Application State
+005 Creating Tables
+006 Relationships Between Tables
+007 Adding Security Policies (RLS)
+008 Connecting Supabase With Our React App
+009 Setting Up Storage Buckets
