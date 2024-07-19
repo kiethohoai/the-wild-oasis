@@ -1,4 +1,9 @@
+/* eslint-disable react/prop-types */
+
+// import { FaRegCalendar } from "react-icons/fa";
 import styled from "styled-components";
+import React from "react";
+import { formatCurrency } from "../../utils/helpers";
 
 const TableRow = styled.div`
   display: grid;
@@ -38,3 +43,29 @@ const Discount = styled.div`
   font-weight: 500;
   color: var(--color-green-700);
 `;
+
+function CabinRow({ cabin }) {
+  const {
+    id,
+    name,
+    maxCapacity,
+    regularPrice,
+    discount,
+    description,
+    image,
+    created_at,
+  } = cabin;
+
+  return (
+    <TableRow role="row">
+      <Img src={image} alt={name} />
+      <Cabin>{name}</Cabin>
+      <div>Fits up to {maxCapacity}</div>
+      <Price>{formatCurrency(regularPrice)}</Price>
+      <Discount>{formatCurrency(discount)}</Discount>
+      <button>Delete</button>
+    </TableRow>
+  );
+}
+
+export default CabinRow;

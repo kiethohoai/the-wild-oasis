@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+
 25 - Biggest Project + Styled Components
 001 Section Overview
 002 Application Planning
@@ -26,3 +28,4 @@
 001 Section Overview
 002 What is React Query
 003 Setting Up React Query
+005 Fetching Cabin Data
