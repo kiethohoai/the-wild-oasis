@@ -1,4 +1,11 @@
+import React from "react";
 import styled from "styled-components";
+import { NavLink } from "react-router-dom";
+import { HiOutlineHome } from "react-icons/hi2";
+import { IoCalendarOutline } from "react-icons/io5";
+import { FiUsers } from "react-icons/fi";
+import { IoSettingsOutline } from "react-icons/io5";
+import { HiOutlineHomeModern } from "react-icons/hi2";
 
 const NavList = styled.ul`
   display: flex;
@@ -6,11 +13,11 @@ const NavList = styled.ul`
   gap: 0.8rem;
 `;
 
-const Link = styled.a`
+const StyledNavLink = styled(NavLink)`
   &:link,
   &:visited {
     display: flex;
-    align-items: center;
+    align-<links: center;
     gap: 1.2rem;
 
     color: var(--color-grey-600);
@@ -44,3 +51,44 @@ const Link = styled.a`
     color: var(--color-brand-600);
   }
 `;
+
+function MainNav() {
+  return (
+    <nav>
+      <NavList>
+        <li>
+          <StyledNavLink to="/dashboard">
+            <HiOutlineHome />
+            <span>Home</span>
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/bookings">
+            <IoCalendarOutline />
+            <span>Bookings</span>
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/cabins">
+            <HiOutlineHomeModern />
+            <span>Cabins</span>
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/users">
+            <FiUsers />
+            <span>Users</span>
+          </StyledNavLink>
+        </li>
+        <li>
+          <StyledNavLink to="/settings">
+            <IoSettingsOutline />
+            <span>Settings</span>
+          </StyledNavLink>
+        </li>
+      </NavList>
+    </nav>
+  );
+}
+
+export default MainNav;
