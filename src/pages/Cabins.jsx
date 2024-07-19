@@ -1,5 +1,6 @@
 import Heading from "../ui/Heading";
 import Row from "../ui/Row";
+import React from "react";
 
 function Cabins() {
   return (
