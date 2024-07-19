@@ -4,7 +4,7 @@ import Row from "../ui/Row";
 
 function Account() {
   return (
-    <>
+    <div>
       <Heading as="h1">Update your account</Heading>
 
       <Row>
@@ -16,7 +16,7 @@ function Account() {
         <Heading as="h3">Update password</Heading>
         <p>Update user password form</p>
       </Row>
-    </>
+    </div>
   );
 }
 
