@@ -30,3 +30,4 @@
 003 Setting Up React Query
 005 Fetching Cabin Data
 006 Mutations Deleting a Cabin
+007 Displaying Toasts (Notifications)
