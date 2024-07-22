@@ -13,8 +13,6 @@ import FormRow from "../../ui/FormRow";
 function CreateCabinForm() {
   const { register, handleSubmit, reset, getValues, formState } = useForm();
   const { errors } = formState;
-  console.log("🚀CHECK  errors =", errors);
-
   const queryClient = useQueryClient();
   const { mutate, isLoading: isCreating } = useMutation({
     mutationFn: createCabin,
@@ -31,11 +29,12 @@ function CreateCabinForm() {
   });
 
   function onSubmit(data) {
-    mutate(data);
+    console.log("🚀CHECK  data =", data);
+    mutate({ ...data, image: data?.image[0] });
   }
 
   function onError(errors) {
-    console.log("🚀CHECK  errors =", errors);
+    // console.log("🚀CHECK  errors =", errors);
   }
 
   return (
@@ -106,8 +105,9 @@ function CreateCabinForm() {
         />
       </FormRow>
 
+      {/* TODO TAST HERE */}
       <FormRow label="Cabin photo">
-        <FileInput id="image" accept="image/*" />
+        <FileInput id="image" accept="image/*" {...register("image")} />
       </FormRow>
 
       <FormRow>
