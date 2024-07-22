@@ -1,4 +1,4 @@
-/* eslint-disable react/prop-types */
+/_ eslint-disable react/prop-types _/
 
 25 - Biggest Project + Styled Components
 001 Section Overview
@@ -31,3 +31,4 @@
 005 Fetching Cabin Data
 006 Mutations Deleting a Cabin
 007 Displaying Toasts (Notifications)
+008 Introducing Another Library React Hook Form
