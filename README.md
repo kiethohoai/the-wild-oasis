@@ -44,3 +44,4 @@
 ==============================================
 28 - Advanced React Patterns
 001 Section Overview
+002 An Overview of Reusability in React
