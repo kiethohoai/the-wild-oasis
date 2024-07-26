@@ -47,3 +47,4 @@
 002 An Overview of Reusability in React
 003 Setting Up an Example
 004 The Render Props Pattern
+005 A Look at Higher-Order Components (HOC)
