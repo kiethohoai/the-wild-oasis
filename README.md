@@ -48,3 +48,4 @@
 003 Setting Up an Example
 004 The Render Props Pattern
 005 A Look at Higher-Order Components (HOC)
+006 The Compound Component Pattern
