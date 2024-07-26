@@ -39,3 +39,4 @@
 013 Abstracting React Query Into Custom Hooks
 013 Abstracting React Query Into Custom Hooks v1
 014 Duplicating Cabins
+015 Fetching Applications Settings
