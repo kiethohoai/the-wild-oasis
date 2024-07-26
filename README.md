@@ -41,3 +41,6 @@
 014 Duplicating Cabins
 015 Fetching Applications Settings
 016 Updating Application Settings
+==============================================
+28 - Advanced React Patterns
+001 Section Overview
