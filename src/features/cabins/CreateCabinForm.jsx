@@ -11,7 +11,7 @@ import Textarea from "../../ui/Textarea";
 import FormRow from "../../ui/FormRow";
 import useEditCabin from "./useEditCabin";
 
-function CreateCabinForm({ cabinToEdit = {} }) {
+function CreateCabinForm({ cabinToEdit = {}, setShowEditForm }) {
   const { id: editId, ...editValue } = cabinToEdit;
   const isEditSection = Boolean(editId);
   const { register, handleSubmit, reset, getValues, formState } = useForm({
@@ -31,7 +31,7 @@ function CreateCabinForm({ cabinToEdit = {} }) {
         { newCabinData: { ...data, image }, id: editId },
         {
           onSuccess: () => {
-            reset();
+            setShowEditForm(false);
           },
         },
       );
