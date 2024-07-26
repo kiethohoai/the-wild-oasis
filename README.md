@@ -46,3 +46,4 @@
 001 Section Overview
 002 An Overview of Reusability in React
 003 Setting Up an Example
+004 The Render Props Pattern
