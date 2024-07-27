@@ -50,3 +50,4 @@
 005 A Look at Higher-Order Components (HOC)
 006 The Compound Component Pattern
 007 Building a Modal Window Using a React Portal
+008 Converting the Modal to a Compound Component
