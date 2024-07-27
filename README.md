@@ -52,3 +52,4 @@
 007 Building a Modal Window Using a React Portal
 008 Converting the Modal to a Compound Component
 009 Detecting a Click Outside the Modal
+010 Confirming Cabin Deletions
