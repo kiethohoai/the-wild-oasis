@@ -53,3 +53,5 @@
 008 Converting the Modal to a Compound Component
 009 Detecting a Click Outside the Modal
 010 Confirming Cabin Deletions
+011 Building a Reusable Table
+012 Applying the Render Props Pattern
