@@ -11,7 +11,7 @@ import Textarea from "../../ui/Textarea";
 import FormRow from "../../ui/FormRow";
 import useEditCabin from "./useEditCabin";
 
-function CreateCabinForm({ cabinToEdit = {}, setShowEditForm }) {
+function CreateCabinForm({ cabinToEdit = {}, setShowEditForm, onCloseModal }) {
   const { id: editId, ...editValue } = cabinToEdit;
   const isEditSection = Boolean(editId);
   const { register, handleSubmit, reset, getValues, formState } = useForm({
@@ -32,6 +32,7 @@ function CreateCabinForm({ cabinToEdit = {}, setShowEditForm }) {
         {
           onSuccess: () => {
             setShowEditForm(false);
+            onCloseModal?.();
           },
         },
       );
@@ -41,6 +42,7 @@ function CreateCabinForm({ cabinToEdit = {}, setShowEditForm }) {
         {
           onSuccess: () => {
             reset();
+            onCloseModal?.();
           },
         },
       );
@@ -51,7 +53,10 @@ function CreateCabinForm({ cabinToEdit = {}, setShowEditForm }) {
   }
 
   return (
-    <Form onSubmit={handleSubmit(onSubmit, onError)}>
+    <Form
+      onSubmit={handleSubmit(onSubmit, onError)}
+      type={onCloseModal ? "modal" : "regular"}
+    >
       <FormRow label="Cabin name" error={errors?.name?.message}>
         <Input
           type="text"
@@ -136,7 +141,11 @@ function CreateCabinForm({ cabinToEdit = {}, setShowEditForm }) {
 
       <FormRow>
         {/* type is an HTML attribute! */}
-        <Button variation="secondary" type="reset">
+        <Button
+          variation="secondary"
+          type="reset"
+          onClick={() => onCloseModal?.()}
+        >
           Cancel
         </Button>
         <Button disabled={isWorking}>
